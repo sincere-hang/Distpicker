@@ -1,8 +1,7 @@
 # Distpicker
 
-使用方法  
-
-引入文件到页面
+##使用方法  
+```
 var dispicker = new dispicker();
   dispicker.init({
     elProvince: ".province-area",
@@ -10,3 +9,4 @@ var dispicker = new dispicker();
     province: "河南省",
     city: "郑州市"
   });
+```
