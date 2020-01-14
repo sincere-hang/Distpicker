@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta name="format-detection" content="telephone=yes">
+<title></title>
+<link rel="stylesheet" href="layui/css/layui.css">
+<link rel="stylesheet" href="css/dispicker.css">
+<script src="js/jquery.js"></script>
+
+<script src="js/layer/layer.js"></script>
+<script src="js/dispicker-data.js"></script>
+
+<style type="text/css">
+  *{margin:0;padding:0;list-style-type:none;box-sizing: border-box;-webkit-overflow-scrolling: touch;font-family: "微软雅黑";}
+  body{overflow: hidden;}
+  .box{width: 100vw;height: 100vh;background: #f4f4f4;}
+  /*内容区*/
+  .content-group{width: 100%;height: 100%;overflow: hidden; overflow-y: scroll;}
+
+  /*信息列表*/
+  .personal-group{width: 94%;margin: 0 auto;margin-top: 10px;background: #fff;border-radius: 8px;padding: 5px;}
+  .personal-area{width: 100%;display: flex;align-items: center;margin-top: 8px;}
+  .personal-area-tit{font-size: 15px;color: #999;width: 50px;}
+  .personal-area-inp{flex: 1;display: flex;align-items: center;margin-left: 8px;}
+  .area-inp-area{flex: 1;}
+  .layui-input{border: none;}
+</style>
+
+</head>
+
+<body>
+  <div class="box">
+    <!-- 中间内容区 -->
+    <div class="content-group">
+      <!-- 信息列表 -->
+      <div class="personal-group">
+        <div class="personal-area">
+          <div class="personal-area-tit">省市</div>
+          <div class="personal-area-inp">
+            <div class="area-inp-area">
+              <input type="text" class="layui-input province-area" placeholder="请选择所在省市" onfocus="this.blur()">
+            </div>
+            <i class="layui-icon layui-icon-triangle-d"></i>
+          </div>
+        </div>
+        <div class="personal-area">
+          <div class="personal-area-tit">城市</div>
+          <div class="personal-area-inp">
+            <div class="area-inp-area">
+              <input type="text" class="layui-input city-area" placeholder="请选择所在城市" onfocus="this.blur()">
+            </div>
+            <i class="layui-icon layui-icon-triangle-d"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script type="text/javascript">
+  console.log(city);
+  var dispicker = new dispicker();
+  dispicker.init({
+    elProvince: ".province-area",
+    elCity: ".city-area",
+    province: "河南省",
+    city: "郑州市"
+  });
+
+</script>
+
+</body>
+</html>
